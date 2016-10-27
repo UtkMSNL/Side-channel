@@ -1,0 +1,32 @@
+Greetings,
+
+This project encodes data in the form of subcarrier erasing and transmits the data along with the regular WiFi traffic.
+
+This project is built upon GNURadio/USRP platform. The project implements the complete IEEE802.11 protocol, which includes PHY (Based on 2), MAC (Based on 3)), and rate adaptation approaches. The rate adaptation approaches includes Minstrel and Adaptive Auto Rate Fallback (AARF).
+ 
+To use this project, please cite the following literatures:
+
+1) @inproceedings{lu2016scheduling,
+  title={Scheduling Dynamic Wireless Networks with Limited Operations},
+  author={Haoyang Lu and Wei Gao},
+  booktitle={IEEE International Conference on Network Protocols},
+  year={2016},
+  organization={IEEE}
+}
+
+2) @inproceedings{bloessl2013ieee,
+  title={An IEEE 802.11 a/g/p OFDM Receiver for GNU Radio},
+  author={Bloessl, Bastian and Segata, Michele and Sommer, Christoph and Dressler, Falko},
+  booktitle={Proceedings of the second workshop on Software radio implementation forum},
+  pages={9--16},
+  year={2013},
+  organization={ACM}
+}
+
+# Installation
+For installation of GNURadio and library, please refer to (https://github.com/bastibl/gr-ieee802-11/).
+
+# Further information
+For details of the project, please refer to the paper 1). If you have any further questions, please contact
+Haoyang Lu, (hlu9@utk.edu)
+University of Tennessee

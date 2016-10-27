@@ -1,0 +1,20 @@
+#!/usr/bin/env python
+
+import time
+import random
+import xmlrpclib
+
+#create server object
+s = xmlrpclib.Server("http://localhost:1234")
+
+#randomly change parameters of the sinusoid
+for i in range(8,32,2):
+	print "=================================================="
+	print "Change TX gain to ", i, "dB"
+	#set new values
+	s.set_tx_gain(i)
+	
+	for encoding in range(8):
+		print "Change encoding to ", encoding
+		s.set_encoding(encoding)
+		time.sleep(18)

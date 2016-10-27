@@ -1,0 +1,30 @@
+#ifndef INCLUDED_IEEE802_11_VERIFY_H
+#define INCLUDED_IEEE802_11_VERIFY_H
+
+extern const char ref_data_bits_24qam[1297];
+extern const char ref_encoded_bits_24qam[2591];
+extern const int ref_nonMarker_24qam[567];
+extern const int ref_marker_24qam[81];
+
+/*---------------------------------------------------------------------------------
+ compute_ber:
+ Compute the difference rate of two sequence
+ Parameters:
+ 	 decoded	- Items to be compared with the reference items
+ 	 ref		- Reference items
+ 	 nItems		- Number of items to be compared
+ Return
+ 	 None
+ ---------------------------------------------------------------------------------*/
+template<class TYPE1, class TYPE2>
+double compute_ber(const TYPE1 * decoded, const TYPE2* ref, int nItems) {
+	double nErr = 0;
+	for(int i=0;i<nItems;i++) {
+		if(decoded[i] != ref[i]) {
+			nErr ++;
+		}
+	}
+	return nErr/nItems;
+}
+
+#endif
